@@ -278,8 +278,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonName: P1Throw
-  slideSpeed: 10
-  slideTime: .5
+  slideSpeed: 14
+  slideTime: .400000006
   slideCurve:
     serializedVersion: 2
     m_Curve:
@@ -288,16 +288,16 @@ MonoBehaviour:
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: .499685913
-      value: .97365123
+    - time: .567849994
+      value: .967622459
       inSlope: -.190482244
       outSlope: -.190482244
       tangentMode: 0
     - time: .90009433
       value: .000167078571
-      inSlope: -3.3528769
-      outSlope: -3.3528769
-      tangentMode: 0
+      inSlope: -2.9118793
+      outSlope: -2.9118793
+      tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
 --- !u!114 &814774460
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalAxis: P1Horizontal
   verticalAxis: P1Vertical
-  speed: 5
+  speed: 6
   normalizeMovement: 1
 --- !u!23 &814774461
 MeshRenderer:
