@@ -258,6 +258,7 @@ GameObject:
   - 135: {fileID: 814774465}
   - 54: {fileID: 814774462}
   - 114: {fileID: 814774460}
+  - 114: {fileID: 814774459}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -265,6 +266,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &814774459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 814774458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64a53452f6304b21ab0a28d4d6e7c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: P1Throw
+  slideSpeed: 10
+  slideTime: .5
 --- !u!114 &814774460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +294,7 @@ MonoBehaviour:
   horizontalAxis: P1Horizontal
   verticalAxis: P1Vertical
   speed: 5
+  normalizeMovement: 1
 --- !u!23 &814774461
 MeshRenderer:
   m_ObjectHideFlags: 0

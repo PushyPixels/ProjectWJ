@@ -6,6 +6,7 @@ public class RigidbodyMoveOnAxisInput : MonoBehaviour
 	public string horizontalAxis = "Horizontal";
 	public string verticalAxis = "Vertical";
 	public float speed = 5.0f;
+	public bool normalizeMovement = true;
 
 	new private Rigidbody rigidbody;
 
@@ -21,6 +22,11 @@ public class RigidbodyMoveOnAxisInput : MonoBehaviour
 		if(moveDirection.sqrMagnitude > 0.0f)
 		{
 			transform.rotation = Quaternion.LookRotation(moveDirection,Vector3.up);
+		}
+
+		if(normalizeMovement)
+		{
+			moveDirection.Normalize();
 		}
 
 		rigidbody.MovePosition(transform.position+moveDirection*speed*Time.deltaTime);
