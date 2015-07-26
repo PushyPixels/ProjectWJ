@@ -23,7 +23,6 @@ public class Slide : MonoBehaviour
 	{
 		if(Input.GetButtonDown(buttonName) && !isSliding)
 		{
-			Debug.Log("Test");
 			StartCoroutine(SlideNow());
 		}
 	}
