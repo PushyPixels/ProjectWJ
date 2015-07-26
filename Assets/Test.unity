@@ -280,6 +280,26 @@ MonoBehaviour:
   buttonName: P1Throw
   slideSpeed: 10
   slideTime: .5
+  slideCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 4.65661287e-10
+      value: .999999881
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .499685913
+      value: .97365123
+      inSlope: -.190482244
+      outSlope: -.190482244
+      tangentMode: 0
+    - time: .90009433
+      value: .000167078571
+      inSlope: -3.3528769
+      outSlope: -3.3528769
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &814774460
 MonoBehaviour:
   m_ObjectHideFlags: 0

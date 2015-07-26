@@ -6,6 +6,7 @@ public class Slide : MonoBehaviour
 	public string buttonName = "P1Throw";
 	public float slideSpeed = 10.0f;
 	public float slideTime = 1.0f;
+	public AnimationCurve slideCurve;
 
 	private bool isSliding;
 	new private Rigidbody rigidbody;
@@ -21,7 +22,7 @@ public class Slide : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if(Input.GetButtonDown(buttonName) && !isSliding)
+		if(Input.GetButtonDown(buttonName) && !isSliding && basicMovement.isMoving)
 		{
 			StartCoroutine(SlideNow());
 		}
@@ -37,7 +38,8 @@ public class Slide : MonoBehaviour
 		while(t <= slideTime)
 		{
 			t += Time.deltaTime;
-			rigidbody.MovePosition(transform.position+transform.forward*slideSpeed*Time.deltaTime);
+			float currentSlideSpeed = slideCurve.Evaluate(t/slideTime)*slideSpeed;
+			rigidbody.MovePosition(transform.position+transform.forward*currentSlideSpeed*Time.deltaTime);
 			rigidbody.velocity = Vector3.zero;
 			yield return null;
 		}

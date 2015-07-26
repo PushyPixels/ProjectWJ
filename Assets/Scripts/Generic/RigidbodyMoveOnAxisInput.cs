@@ -8,6 +8,8 @@ public class RigidbodyMoveOnAxisInput : MonoBehaviour
 	public float speed = 5.0f;
 	public bool normalizeMovement = true;
 
+	public bool isMoving { get; private set; }
+
 	new private Rigidbody rigidbody;
 
 	void Start()
@@ -22,6 +24,11 @@ public class RigidbodyMoveOnAxisInput : MonoBehaviour
 		if(moveDirection.sqrMagnitude > 0.0f)
 		{
 			transform.rotation = Quaternion.LookRotation(moveDirection,Vector3.up);
+			isMoving = true;
+		}
+		else
+		{
+			isMoving = false;
 		}
 
 		if(normalizeMovement)
