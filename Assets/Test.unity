@@ -258,7 +258,6 @@ GameObject:
   - 135: {fileID: 814774465}
   - 54: {fileID: 814774462}
   - 114: {fileID: 814774460}
-  - 114: {fileID: 814774459}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -266,21 +265,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &814774459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 814774458}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f54bac49579fc48988856a64ae577e87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &814774460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,9 +314,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!33 &814774463
 MeshFilter:

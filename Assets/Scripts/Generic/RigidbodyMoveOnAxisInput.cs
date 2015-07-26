@@ -1,12 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveOnAxisInput : MonoBehaviour
+public class RigidbodyMoveOnAxisInput : MonoBehaviour
 {
 	public string horizontalAxis = "Horizontal";
 	public string verticalAxis = "Vertical";
 	public float speed = 5.0f;
-	
+
+	new private Rigidbody rigidbody;
+
+	void Start()
+	{
+		rigidbody = GetComponent<Rigidbody>();
+	}
+
 	// Update is called once per frame
 	void Update ()
 	{
@@ -16,6 +23,7 @@ public class MoveOnAxisInput : MonoBehaviour
 			transform.rotation = Quaternion.LookRotation(moveDirection,Vector3.up);
 		}
 
-		transform.position += moveDirection*speed*Time.deltaTime;
+		rigidbody.MovePosition(transform.position+moveDirection*speed*Time.deltaTime);
+		rigidbody.velocity = Vector3.zero;
 	}
 }
