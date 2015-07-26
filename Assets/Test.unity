@@ -288,15 +288,15 @@ MonoBehaviour:
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: .567849994
-      value: .967622459
-      inSlope: -.190482244
-      outSlope: -.190482244
+    - time: .499685913
+      value: .990211427
+      inSlope: -.0412748456
+      outSlope: -.0412748456
       tangentMode: 0
-    - time: .90009433
+    - time: .799901366
       value: .000167078571
-      inSlope: -2.9118793
-      outSlope: -2.9118793
+      inSlope: -3.29777956
+      outSlope: -3.29777956
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
