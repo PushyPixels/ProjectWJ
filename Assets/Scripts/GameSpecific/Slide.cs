@@ -8,7 +8,7 @@ public class Slide : MonoBehaviour
 	public float slideTime = 1.0f;
 	public AnimationCurve slideCurve;
 
-	private bool isSliding;
+	public bool isSliding { get; private set; }
 	new private Rigidbody rigidbody;
 	private RigidbodyMoveOnAxisInput basicMovement;
 
