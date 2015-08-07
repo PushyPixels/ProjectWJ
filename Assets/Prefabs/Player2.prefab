@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11419788}
   - 114: {fileID: 11493364}
   m_Layer: 0
-  m_Name: Player1
+  m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514f38881b0854c8bb2029ada8ba4042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalAxis: P1Horizontal
-  verticalAxis: P1Vertical
+  horizontalAxis: P2Horizontal
+  verticalAxis: P2Vertical
   speed: 6
   normalizeMovement: 1
 --- !u!114 &11493364
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b64a53452f6304b21ab0a28d4d6e7c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonName: P1Throw
+  buttonName: P2Throw
   slideSpeed: 14
   slideTime: .400000006
   slideCurve:
@@ -146,7 +146,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: buttonName
+      value: P2Throw
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: horizontalAxis
+      value: P2Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: verticalAxis
+      value: P2Vertical
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 114224}
