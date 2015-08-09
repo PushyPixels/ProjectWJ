@@ -8,18 +8,20 @@ public class ThrowDisc : MonoBehaviour
 	public Transform handPosition;
 
 	private RigidbodyMoveOnAxisInput basicMovement;
+	private Slide slideMovement;
 	private bool ignoreNextTrigger = false;
 
 	// Use this for initialization
 	void Start ()
 	{
 		basicMovement = GetComponent<RigidbodyMoveOnAxisInput>();
+		slideMovement = GetComponent<Slide>();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if(isHoldingDisc && Input.GetButtonDown(buttonName))
+		if(isHoldingDisc && Input.GetButtonDown(buttonName) && !slideMovement.isSliding)
 		{
 			Disc.instance.Throw(transform.forward);
 			isHoldingDisc = false;
