@@ -4,12 +4,14 @@ using System.Collections;
 public class ThrowDisc : MonoBehaviour
 {
 	public string buttonName = "P1Throw";
-	public bool isHoldingDisc = false;
+	public float reCatchDelay = 0.5f;
 	public Transform handPosition;
+
+	public bool isHoldingDisc { get; private set; }
 
 	private RigidbodyMoveOnAxisInput basicMovement;
 	private Slide slideMovement;
-	private bool ignoreNextTrigger = false;
+	private bool ignoreTriggers = false;
 
 	// Use this for initialization
 	void Start ()
@@ -26,21 +28,23 @@ public class ThrowDisc : MonoBehaviour
 			Disc.instance.Throw(transform.forward);
 			isHoldingDisc = false;
 			basicMovement.enableMovement = true;
-			ignoreNextTrigger = true;
+			ignoreTriggers = true;
+			Invoke("ResetIgnoreTriggers",reCatchDelay);
 		}
+	}
+
+	void ResetIgnoreTriggers()
+	{
+		ignoreTriggers = false;
 	}
 
 	void OnTriggerEnter()
 	{
-		if(!ignoreNextTrigger)
+		if(!ignoreTriggers)
 		{
 			basicMovement.enableMovement = false;
 			isHoldingDisc = true;
 			Disc.instance.Catch(handPosition);
-		}
-		else
-		{
-			ignoreNextTrigger = false;
 		}
 	}
 }
